@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import SearchBar from "../components/SearchBar/SearchBar";
-import ImageGallery from "../components/ImageGallery/ImageGallery";
-import Loader from "../components/Loader/Loader";
-import LoadMoreBtn from "../components/LoadMoreBtn/LoadMoreBtn";
-import ImageModal from "../components/ImageModal/ImageModal";
+import SearchBar from "./components/SearchBar/SearchBar";
+import ImageGallery from "./components/ImageGallery/ImageGallery";
+import Loader from "./components/Loader/Loader";
+import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
+import ImageModal from "./components/ImageModal/ImageModal";
 import { fetchPhotos } from "./gallery-api";
 import style from "./App.module.css";
 
