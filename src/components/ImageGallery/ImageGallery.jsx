@@ -5,14 +5,16 @@ import ImageCard from "../ImageCard/ImageCard";
 const ImageGallery = ({ photos, onImageClick }) => {
   return (
     <ul className={style.gallery}>
-      {photos.map(({ id, urls: { small, regular }, alt_description }) => {
+      {photos.map((photo) => {
+        const { id, urls, alt_description } = photo;
         return (
           <li key={id}>
             <ImageCard
-              imageLink={small}
-              imageLinkModal={regular}
+              imageLink={urls.small}
+              imageLinkModal={urls.regular}
               descr={alt_description}
               onImageClick={onImageClick}
+              imageData={photo}
             />
           </li>
         );

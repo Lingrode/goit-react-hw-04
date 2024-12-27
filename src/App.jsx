@@ -50,8 +50,8 @@ function App() {
     setPhotos([]);
   };
 
-  const openModal = (imageLink) => {
-    setSelectedImage(imageLink);
+  const openModal = (imageData) => {
+    setSelectedImage(imageData);
     setIsModalOpen(true);
   };
 
@@ -67,8 +67,9 @@ function App() {
       <ImageGallery photos={photos} onImageClick={openModal} />
 
       {page !== totalPages ? <LoadMoreBtn onLoad={handleLoadPage} /> : ""}
+
       <ImageModal
-        imageLink={selectedImage}
+        imageData={selectedImage}
         isOpen={isModalOpen}
         onClose={closeModal}
       />
