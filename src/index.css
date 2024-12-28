@@ -1,10 +1,9 @@
 body {
-  font-family: "Trebuchet MS", "Lucida Sans", Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5em;
   line-height: 1.5;
   color: #2b2b2b;
   margin: 0;
-  background-color: bisque;
 }
 
 body.ReactModal__Body--open {
@@ -14,6 +13,7 @@ body.ReactModal__Body--open {
 .ReactModal__Overlay {
   opacity: 0;
   transition: opacity 200ms ease-in-out;
+  z-index: 999;
 }
 
 .ReactModal__Overlay--after-open {

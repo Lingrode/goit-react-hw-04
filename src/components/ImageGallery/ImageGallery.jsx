@@ -1,5 +1,5 @@
-import style from "./ImageGallery.module.css";
 import PropTypes from "prop-types";
+import style from "./ImageGallery.module.css";
 import ImageCard from "../ImageCard/ImageCard";
 
 const ImageGallery = ({ photos, onImageClick }) => {
@@ -8,7 +8,7 @@ const ImageGallery = ({ photos, onImageClick }) => {
       {photos.map((photo) => {
         const { id, urls, alt_description } = photo;
         return (
-          <li key={id}>
+          <li key={id} className={style.galleryItem}>
             <ImageCard
               imageLink={urls.small}
               imageLinkModal={urls.regular}

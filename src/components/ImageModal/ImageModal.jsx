@@ -17,7 +17,7 @@ const styles = {
 const ImageModal = ({ imageData, isOpen, onClose }) => {
   if (!imageData) return;
 
-  const { urls, description, likes, user } = imageData;
+  const { urls, description, alt_description, likes, user } = imageData;
 
   return (
     <ReactModal
@@ -33,7 +33,7 @@ const ImageModal = ({ imageData, isOpen, onClose }) => {
       <button className={style.close} onClick={() => onClose()}>
         <RiCloseLargeFill className={style.closeIcon} width={90} height={100} />
       </button>
-      <img className={style.image} src={urls.regular} alt="" />
+      <img className={style.image} src={urls.regular} alt={alt_description} />
       <div className={style.content}>
         {description && <p>💬 Title: {description}</p>}
         <p>👤 Author: {user.name}</p>
